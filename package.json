@@ -12,7 +12,7 @@
     "pug": "^2.0.4"
   },
   "scripts": {
-    "start": "parcel index.pug",
-    "build": "parcel build index.pug -d docs"
+    "start": "parcel src/index.pug",
+    "build": "parcel build src/index.pug -d ./"
   }
 }
