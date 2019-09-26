@@ -1,37 +1,32 @@
 doctype html
-html(lang="en")
+html(lang='en')
   head
     title My Personal WebSite
-    link(href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto&display=swap", rel="stylesheet")
-    link(rel="stylesheet", href="index.css")
-    meta(name="viewport", content="width=device-width, initial-scale=1")
+    link(rel='stylesheet', href='./index.css')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
   body
     .page
       header.header
         h1.logo Marat Abdulin
-        nav.navigation
-          a.nav-item(href="") Home
-          a.nav-item(href="") About
-          a.nav-item(href="") Projects
-      main.content
+        //- nav.navigation
+          a.nav-item(href='') Home
+          a.nav-item(href='') About
+          a.nav-item(href='') Projects
+      main
         section.homepage
           h1 Hi, I'm Marat!
           p I’m a frontend engineer at Earnest
-      footer.contacts
-        a.contact(href="") Email
+      footer
+        a.contact(href='') Email
+        |  •
         |
-        |&bull;
+        a.contact(href='') LinkedIn
+        |  •
         |
-        a.contact(href="") LinkedIn
+        a.contact(href='') Twitter
+        |  •
         |
-        |&bull;
+        a.contact(href='') Keybase
+        |  •
         |
-        a.contact(href="") Twitter
-        |
-        |&bull;
-        |
-        a.contact(href="") Keybase
-        |
-        |&bull;
-        |
-        a.contact(href="") Instagram
+        a.contact(href='') Instagram
