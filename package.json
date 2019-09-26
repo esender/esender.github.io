@@ -8,13 +8,19 @@
   "devDependencies": {
     "autoprefixer": "^9.6.1",
     "parcel": "^1.12.3",
-    "pug": "^2.0.4"
+    "pug": "^2.0.4",
+    "rimraf": "^3.0.0"
   },
   "scripts": {
-    "start": "parcel src/index.pug"
+    "start": "parcel src/index.pug",
+    "build": "yarn clean && node scripts/build.js",
+    "clean": "rimraf dist/ index.html *.css"
   },
   "dependencies": {
-    "posthtml-postcss-modules": "^0.1.7"
+    "css-mqpacker": "^7.0.0",
+    "parcel-bundler": "^1.12.3",
+    "postcss": "^7.0.18",
+    "posthtml": "^0.11.6"
   },
   "engines": {
     "node": "^12.0.0"
