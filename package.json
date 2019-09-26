@@ -13,7 +13,7 @@
   },
   "scripts": {
     "start": "parcel src/index.pug",
-    "build": "yarn clean && node scripts/build.js",
+    "build": "yarn clean && NODE_ENV=production node scripts/build.js",
     "clean": "rimraf dist/ index.html *.css"
   },
   "dependencies": {
