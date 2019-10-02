@@ -15,7 +15,7 @@ hr {
 }
 
 .content {
-  padding: 0 var(--indent-base);
+  padding: 0 var(--indent-base) var(--indent-base);
 }
 
 .contacts-list {
