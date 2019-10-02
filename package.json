@@ -19,7 +19,7 @@
     "start": "parcel src/index.pug",
     "build": "yarn clean && yarn lint && NODE_ENV=production node scripts/build.js",
     "clean": "rimraf dist/ index.html *.css",
-    "lint": "stylelint src/**/*.sss"
+    "lint": "stylelint src/**/*.sss src/*.sss"
   },
   "dependencies": {
     "css-mqpacker": "^7.0.0",

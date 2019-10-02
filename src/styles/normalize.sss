@@ -11,8 +11,8 @@ main
   display: block
 
 h1
-  font-size: 2em
   margin: 0.67em 0
+  font-size: 2em
 
 hr
   box-sizing: content-box
@@ -20,6 +20,7 @@ hr
   overflow: visible
 
 pre
+  /* stylelint-disable-next-line */
   font-family: monospace, monospace
   font-size: 1em
 
@@ -27,9 +28,9 @@ a
   background-color: transparent
 
 abbr[title]
-  border-bottom: none
   text-decoration: underline
   text-decoration: underline dotted
+  border-bottom: none
 
 b,
 strong
@@ -38,6 +39,7 @@ strong
 code,
 kbd,
 samp
+  /* stylelint-disable-next-line */
   font-family: monospace, monospace
   font-size: 1em
 
@@ -46,9 +48,9 @@ small
 
 sub,
 sup
+  position: relative
   font-size: 75%
   line-height: 0
-  position: relative
   vertical-align: baseline
 
 sub
@@ -65,10 +67,10 @@ input,
 optgroup,
 select,
 textarea
+  margin: 0
   font-family: inherit
   font-size: 100%
   line-height: 1.15
-  margin: 0
 
 button,
 input
@@ -88,8 +90,8 @@ button::-moz-focus-inner,
 [type="button"]::-moz-focus-inner,
 [type="reset"]::-moz-focus-inner,
 [type="submit"]::-moz-focus-inner
-  border-style: none
   padding: 0
+  border-style: none
 
 button:-moz-focusring,
 [type="button"]:-moz-focusring,
@@ -102,10 +104,10 @@ fieldset
 
 legend
   box-sizing: border-box
-  color: inherit
   display: table
   max-width: 100%
   padding: 0
+  color: inherit
   white-space: normal
 
 progress
