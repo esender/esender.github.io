@@ -9,12 +9,17 @@
     "autoprefixer": "^9.6.1",
     "parcel": "^1.12.3",
     "pug": "^2.0.4",
-    "rimraf": "^3.0.0"
+    "rimraf": "^3.0.0",
+    "stylelint": "^11.0.0",
+    "stylelint-config-recess-order": "^2.0.3",
+    "stylelint-config-standard": "^19.0.0",
+    "sugarss": "^2.0.0"
   },
   "scripts": {
     "start": "parcel src/index.pug",
-    "build": "yarn clean && NODE_ENV=production node scripts/build.js",
-    "clean": "rimraf dist/ index.html *.css"
+    "build": "yarn clean && yarn lint && NODE_ENV=production node scripts/build.js",
+    "clean": "rimraf dist/ index.html *.css",
+    "lint": "stylelint src/**/*.sss"
   },
   "dependencies": {
     "css-mqpacker": "^7.0.0",
@@ -39,8 +44,19 @@
       },
       "postcss-preset-env": {
         "stage": 0,
-        "importFrom": "./src/styles/custom-media.css"
+        "importFrom": "./src/styles/custom-media.sss"
       }
+    }
+  },
+  "stylelint": {
+    "extends": [
+      "stylelint-config-standard",
+      "stylelint-config-recess-order"
+    ],
+    "rules": {
+      "declaration-block-trailing-semicolon": null,
+      "block-closing-brace-newline-before": null,
+      "block-opening-brace-space-before": null
     }
   }
 }
