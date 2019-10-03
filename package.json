@@ -44,7 +44,14 @@
       },
       "postcss-preset-env": {
         "stage": 0,
-        "importFrom": "./src/styles/custom-media.sss"
+        "importFrom": [{
+          "customMedia": {
+            "--mobile-medium": "(width >= 360px)",
+            "--small-tablet": "(width >= 660px)",
+            "--tablet": "(width >= 768px)",
+            "--desktop": "(width >= 1024px)"
+          }
+        }]
       }
     }
   },
