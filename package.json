@@ -25,7 +25,7 @@
   "scripts": {
     "start": "parcel src/index.pug",
     "build": "yarn clean && NODE_ENV=production node scripts/build.js",
-    "clean": "rimraf dist/ index.html *.css",
+    "clean": "rimraf dist/ index.html *.css *.png",
     "lint": "stylelint src/**/*.sss src/*.sss",
     "test": "yarn lint && yarn build && size-limit"
   },

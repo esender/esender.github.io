@@ -10,6 +10,7 @@ let fs = require('fs')
 
 let readFile = promisify(fs.readFile)
 let writeFile = promisify(fs.writeFile)
+let copyFile = promisify(fs.copyFile)
 
 const A = 'a'.charCodeAt(0)
 
@@ -27,6 +28,7 @@ async function build() {
   let assets = findAssets(bundle)
 
   let cssFile = assets.find(i => extname(i) === '.css')
+  let imagesFiles = assets.filter(i => extname(i) === '.png')
 
   let css = await readFile(cssFile).then(i => i.toString())
 
@@ -69,6 +71,9 @@ async function build() {
   }
 
   await writeFile(join(__dirname, '..', basename(cssFile)), css)
+  await Promise.all(assets.filter(i => extname(i) === '.png').map(async i => {
+    await copyFile(i, join(__dirname, '..', basename(i)))
+  }))
   await Promise.all(assets
     .filter(i => extname(i) === '.html')
     .map(async i => {
