@@ -13,20 +13,18 @@
     "stylelint": "^11.0.0",
     "stylelint-config-recess-order": "^2.0.3",
     "stylelint-config-standard": "^19.0.0",
-    "sugarss": "^2.0.0"
+    "sugarss": "^2.0.0",
+    "css-mqpacker": "^7.0.0",
+    "parcel-bundler": "^1.12.3",
+    "postcss": "^7.0.18",
+    "postcss-preset-env": "^6.7.0",
+    "posthtml": "^0.11.6"
   },
   "scripts": {
     "start": "parcel src/index.pug",
     "build": "yarn clean && yarn lint && NODE_ENV=production node scripts/build.js",
     "clean": "rimraf dist/ index.html *.css",
     "lint": "stylelint src/**/*.sss src/*.sss"
-  },
-  "dependencies": {
-    "css-mqpacker": "^7.0.0",
-    "parcel-bundler": "^1.12.3",
-    "postcss": "^7.0.18",
-    "postcss-preset-env": "^6.7.0",
-    "posthtml": "^0.11.6"
   },
   "engines": {
     "node": "^12.0.0"
