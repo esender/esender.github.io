@@ -7,18 +7,19 @@
   "license": "MIT",
   "devDependencies": {
     "autoprefixer": "^9.6.1",
+    "css-mqpacker": "^7.0.0",
+    "husky": "^3.0.8",
     "parcel": "^1.12.3",
+    "parcel-bundler": "^1.12.3",
+    "postcss": "^7.0.18",
+    "postcss-preset-env": "^6.7.0",
+    "posthtml": "^0.11.6",
     "pug": "^2.0.4",
     "rimraf": "^3.0.0",
     "stylelint": "^11.0.0",
     "stylelint-config-recess-order": "^2.0.3",
     "stylelint-config-standard": "^19.0.0",
-    "sugarss": "^2.0.0",
-    "css-mqpacker": "^7.0.0",
-    "parcel-bundler": "^1.12.3",
-    "postcss": "^7.0.18",
-    "postcss-preset-env": "^6.7.0",
-    "posthtml": "^0.11.6"
+    "sugarss": "^2.0.0"
   },
   "scripts": {
     "start": "parcel src/index.pug",
@@ -42,14 +43,16 @@
       },
       "postcss-preset-env": {
         "stage": 0,
-        "importFrom": [{
-          "customMedia": {
-            "--mobile-medium": "(width >= 360px)",
-            "--small-tablet": "(width >= 660px)",
-            "--tablet": "(width >= 768px)",
-            "--desktop": "(width >= 1024px)"
+        "importFrom": [
+          {
+            "customMedia": {
+              "--mobile-medium": "(width >= 360px)",
+              "--small-tablet": "(width >= 660px)",
+              "--tablet": "(width >= 768px)",
+              "--desktop": "(width >= 1024px)"
+            }
           }
-        }]
+        ]
       }
     }
   },
@@ -62,6 +65,11 @@
       "declaration-block-trailing-semicolon": null,
       "block-closing-brace-newline-before": null,
       "block-opening-brace-space-before": null
+    }
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn lint"
     }
   }
 }
