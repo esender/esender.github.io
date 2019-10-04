@@ -6,6 +6,7 @@
   "author": "Marat Abdulin <esend.work@gmail.com>",
   "license": "MIT",
   "devDependencies": {
+    "@size-limit/file": "^2.1.6",
     "autoprefixer": "^9.6.1",
     "css-mqpacker": "^7.0.0",
     "husky": "^3.0.8",
@@ -23,9 +24,10 @@
   },
   "scripts": {
     "start": "parcel src/index.pug",
-    "build": "yarn clean && yarn lint && NODE_ENV=production node scripts/build.js",
+    "build": "yarn clean && NODE_ENV=production node scripts/build.js",
     "clean": "rimraf dist/ index.html *.css",
-    "lint": "stylelint src/**/*.sss src/*.sss"
+    "lint": "stylelint src/**/*.sss src/*.sss",
+    "test": "yarn lint && yarn build && size-limit"
   },
   "engines": {
     "node": "^12.0.0"
@@ -71,5 +73,17 @@
     "hooks": {
       "pre-commit": "yarn lint"
     }
-  }
+  },
+  "size-limit": [
+    {
+      "name": "HTML's",
+      "path": "index.html",
+      "limit": "1 KB"
+    },
+    {
+      "name": "Styles",
+      "path": "src.*.css",
+      "limit": "2 KB"
+    }
+  ]
 }
