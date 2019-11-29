@@ -1,39 +1,7 @@
 @import './styles/normalize.sss'
 @import './styles/variables.sss'
 @import './styles/typography.sss'
-
-body
-  background: var(--color-bg)
-
-p,
-hr
-  margin-top: var(--indent-base)
-  margin-bottom: var(--indent-base)
-
-hr
-  height: 1px
-  background-color: var(--color-hr)
-  border: none
-
-.content
-  max-width: 768px
-  padding: 0 var(--indent-base) var(--indent-base)
-  margin: 0 auto
-
-.contacts-list
-  padding: 0
-  list-style: none
-
-.contacts-list li
-  line-height: 1.75rem
-
-@media (--small-tablet)
-  .contacts
-    display: flex
-    justify-content: space-between
-
-  .list-wrapper
-    width: calc(50% - var(--indent-base))
-
-  .list-wrapper > h3
-    margin-top: 0
+@import './styles/global.sss'
+@import './styles/header.sss'
+@import './styles/main.sss'
+@import './styles/home-page.sss'

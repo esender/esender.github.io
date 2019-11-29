@@ -7,30 +7,44 @@ html(lang='en' itemscope itemtype='http://schema.org/Person')
     meta(name='viewport', content='width=device-width, initial-scale=1')
     link(rel='shortcut icon' href='./icon-32x32.png' sizes='32x32')
     link(rel='stylesheet', href='./index.sss')
+    link(href="https://fonts.googleapis.com/css?family=Fira+Sans|Open+Sans:400,400i,700&display=swap&subset=cyrillic" rel="stylesheet")
     meta(itemprop='gender' content='male')
     link(itemprop='url' href='https://esender.me')
-  body
-    main.content
-      p.big Hi there,
-      p.big
-        | I’m Marat Abdulin,
-        br
-        | a #[mark.highlight front-end engineer] at Earnest based in Kazan, Russia.
-      p I enjoy working on performance issues, creating better UX, and solving complex problems in frontend. I love writing simple and clear code that easy for supporting and changing.
-      hr
-      section.contacts
-        .list-wrapper
-          h3 Get in touch
-          ul.contacts-list
-            li Email #[a(href="mailto:esend.work@gmail.com") esend.work@gmail.com]
-            li LinkedIn #[a(href="https://www.linkedin.com/in/esender/") esender]
-            li Telegram #[a(href="https://t.me/esender") esender]
-            li Keybase #[a(href="https://keybase.io/esender") esender]
-        .list-wrapper
-          h3 Follow me
-          ul.contacts-list
-            li Twitter #[a(href="https://twitter.com/esender_") esender_]
-            li Twitch #[a(href="https://twitch.tv/letscode_io") letscode-io]
-            li GitHub #[a(href="https://github.com/esender") esender]
-      script.
-        document.documentElement.style.setProperty('--color-main', ['#b35ae8', '#635ae8', '#e85a5a', '#5a72e8'][parseInt(Math.random()*4)])
+  body.page
+    header.header
+      .name Marat Abdulin
+      //- nav
+        ul.navigation-list
+          li.navigation-item
+            a.navigation-link(href="#") Home
+          li.navigation-item
+            a.navigation-link(href="#") About
+          li.navigation-item
+            a.navigation-link(href="#") Projects
+          li.navigation-item
+            a.navigation-link(href="#") CV
+          li.navigation-item
+            a.navigation-link(href="#") Blog
+    main.main
+      h1.greeting I am Marat Abdulin 👋
+      h2.who-i-am A software engineer based in Kazan, Russia
+      p I write in JavaScript and Ruby. I enjoy working on performance issues, creating better UX, and solving complex problems.
+      //- p You also can browse #[a(href) who I am] or check out my #[a(href) projects] page.
+      p Email me #[a(href="mailto:esend.work@gmail.com") esend.work@gmail.com] or find me there:
+      ul.social-links
+        li.social-links-item
+          a(href="https://www.linkedin.com/in/esender/")
+            svg.social-icon
+              use(xlink:href="./images/social-icons.svg#linkedin")
+        li.social-links-item
+          a(href="https://t.me/esender")
+            svg.social-icon
+              use(xlink:href="./images/social-icons.svg#telegram")
+        li.social-links-item
+          a(href="https://twitter.com/esender_")
+            svg.social-icon
+              use(xlink:href="./images/social-icons.svg#github")
+        li.social-links-item
+          a(href="https://github.com/esender")
+            svg.social-icon
+              use(xlink:href="./images/social-icons.svg#twitter")
