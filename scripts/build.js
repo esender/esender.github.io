@@ -87,7 +87,9 @@ async function build() {
   )
 }
 
-build().catch(e => {
-  process.stderr.write(e.stack + '\n')
-  process.exit(1)
-}).then(() => process.exit(0))
+build()
+  .catch(e => {
+    process.stderr.write(e.stack + '\n')
+    process.exit(1)
+  })
+  .then(() => process.exit(0))
