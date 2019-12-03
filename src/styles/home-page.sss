@@ -1,13 +1,14 @@
-.social-links
-  font-size: 32px
-  text-align: center
+.greeting,
+.hey,
+.who-i-am
+  font-family: var(--secondary-font)
 
-.social-links-item
-  display: inline-block
+.hey
+  display: none
 
-.social-links-item + .social-links-item
-  margin-left: 1em
+.who-i-am
+  margin-bottom: 1.5em
 
-.social-icon
-  width: 1em
-  height: 1em
+@media (--small-tablet)
+  .hey
+    display: inline
