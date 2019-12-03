@@ -5,12 +5,12 @@ html(lang='en' itemscope itemtype='http://schema.org/Person')
     title Marat Abdulin
     meta(name='description' content='Contacts of Marat Abdulin')
     meta(name='viewport', content='width=device-width, initial-scale=1')
-    link(rel='shortcut icon' href='./icon-32x32.png' sizes='32x32')
+    link(rel='shortcut icon' href='./favicon.png' sizes='32x32')
     link(rel='stylesheet', href='./index.sss')
     link(href="https://fonts.googleapis.com/css?family=Fira+Sans|Open+Sans:400,400i,700&display=swap&subset=cyrillic" rel="stylesheet")
     meta(itemprop='gender' content='male')
     link(itemprop='url' href='https://esender.me')
-  body.page
+  body
     header.header
       .name Marat Abdulin
       //- nav
@@ -26,11 +26,14 @@ html(lang='en' itemscope itemtype='http://schema.org/Person')
           li.navigation-item
             a.navigation-link(href="#") Blog
     main.main
-      h1.greeting I am Marat Abdulin 👋
+      h1.greeting #[span.hey Hi,] I am Marat Abdulin 👋
       h2.who-i-am A software engineer based in Kazan, Russia
       p I write in JavaScript and Ruby. I enjoy working on performance issues, creating better UX, and solving complex problems.
       //- p You also can browse #[a(href) who I am] or check out my #[a(href) projects] page.
-      p Email me #[a(href="mailto:esend.work@gmail.com") esend.work@gmail.com] or find me there:
+    hr.delimiter
+    footer.footer
+      a(href="mailto:marat@esender.me") marat@esender.me
+      .or or
       ul.social-links
         li.social-links-item
           a(href="https://www.linkedin.com/in/esender/")
