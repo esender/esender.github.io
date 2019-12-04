@@ -9,6 +9,19 @@
 .who-i-am
   margin-bottom: 1.5em
 
+.content
+  margin: 0 auto
+
 @media (--small-tablet)
   .hey
     display: inline
+
+  .content
+    margin-top: 50px
+    margin-bottom: 50px
+
+@media (--tablet)
+  .content
+    max-width: var(--max-content-width)
+    margin-right: auto
+    margin-left: auto

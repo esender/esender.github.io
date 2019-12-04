@@ -4,11 +4,15 @@
   --primary-font: 'Open Sans', sans-serif
   --secondary-font: 'Fira Sans', sans-serif
   --color-base: #333
-  --page-spacings: 1rem
+  --page-vertical-spacings: 1rem
+  --page-horizontal-spacings: 1rem
+  --page-spacings: var(--page-vertical-spacings) var(--page-horizontal-spacings)
+  --max-page-width: 1200px
+  --max-content-width: 800px
 
-@media (--mobile-medium)
+@media (--small-tablet)
   :root
-    --page-spacings: 1rem 2rem
+    --page-horizontal-spacings: 2rem
 
 /* @media (prefers-color-scheme: dark)
   :root

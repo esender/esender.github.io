@@ -1,10 +1,10 @@
 .header
   padding: var(--page-spacings)
+  text-align: center
 
 .name
   font-family: var(--secondary-font)
   font-size: 1.3rem
-  text-align: center
 
 .navigation-list
   display: flex
@@ -12,3 +12,9 @@
 
 .navigation-item
   list-style: none
+
+@media (--tablet)
+  .header
+    max-width: var(--max-page-width)
+    margin: 0 auto
+    text-align: left

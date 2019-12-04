@@ -25,12 +25,14 @@ html(lang='en' itemscope itemtype='http://schema.org/Person')
             a.navigation-link(href="#") CV
           li.navigation-item
             a.navigation-link(href="#") Blog
-    main.main
-      h1.greeting #[span.hey Hi,] I am Marat Abdulin 👋
-      h2.who-i-am A software engineer based in Kazan, Russia
-      p I write in JavaScript and Ruby. I enjoy working on performance issues, creating better UX, and solving complex problems.
-      //- p You also can browse #[a(href) who I am] or check out my #[a(href) projects] page.
-    hr.delimiter
+    main.container
+      .content
+        h1.greeting #[span.hey Hi,] I am Marat Abdulin 👋
+        h2.who-i-am A software engineer based in Kazan, Russia
+        p I write in JavaScript and Ruby. I enjoy working on performance issues, creating better UX, and solving complex problems.
+        //- p You also can browse #[a(href) who I am] or check out my #[a(href) projects] page.
+    .container
+      hr.delimiter
     footer.footer
       a(href="mailto:marat@esender.me") marat@esender.me
       .or or
