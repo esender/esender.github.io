@@ -1,12 +1,13 @@
+include _mixins.pug
 doctype html
 html(lang='en' itemscope itemtype='http://schema.org/Person')
   head
     meta(charset='UTF-8')
     title Marat Abdulin
     meta(name='description' content='Contacts of Marat Abdulin')
-    meta(name='viewport', content='width=device-width, initial-scale=1')
+    meta(name='viewport' content='width=device-width, initial-scale=1')
     link(rel='shortcut icon' href='./favicon.png' sizes='32x32')
-    link(rel='stylesheet', href='./index.sss')
+    link(rel='stylesheet' href='./index.sss')
     link(href="https://fonts.googleapis.com/css?family=Fira+Sans|Open+Sans:400,400i,700&display=swap&subset=cyrillic" rel="stylesheet")
     meta(itemprop='gender' content='male')
     link(itemprop='url' href='https://esender.me')
@@ -29,7 +30,8 @@ html(lang='en' itemscope itemtype='http://schema.org/Person')
       .content
         h1.greeting #[span.hey Hi,] I am Marat Abdulin 👋
         h2.who-i-am A software engineer based in Kazan, Russia
-        p I write in JavaScript and Ruby. I enjoy working on performance issues, creating better UX, and solving complex problems.
+        p My favorite language is JavaScript. I'm fond of solving performance issues and working on non-trivial problems. My experience allows me to choose the best solutions for the business. I'm motivated by working on a useful product.
+        //-More about me, my axperience and interests.
         //- p You also can browse #[a(href) who I am] or check out my #[a(href) projects] page.
     .container
       hr.delimiter
@@ -39,17 +41,13 @@ html(lang='en' itemscope itemtype='http://schema.org/Person')
       ul.social-links
         li.social-links-item
           a(href="https://www.linkedin.com/in/esender/")
-            svg.social-icon
-              use(xlink:href="./images/social-icons.svg#linkedin")
+            +icon('linkedin')
         li.social-links-item
           a(href="https://t.me/esender")
-            svg.social-icon
-              use(xlink:href="./images/social-icons.svg#telegram")
+            +icon('telegram')
         li.social-links-item
           a(href="https://twitter.com/esender_")
-            svg.social-icon
-              use(xlink:href="./images/social-icons.svg#github")
+            +icon('github')
         li.social-links-item
           a(href="https://github.com/esender")
-            svg.social-icon
-              use(xlink:href="./images/social-icons.svg#twitter")
+            +icon('twitter')

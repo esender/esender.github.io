@@ -1,0 +1,4 @@
+mixin icon(sprite)
+  - href = './images/social-icons.svg#' + sprite
+  svg.social-icon
+    use(xlink:href=href)
