@@ -20,7 +20,7 @@ function findAssets (bundle) {
   }, [bundle.name])
 }
 
-let bundler = new Bundler(join(__dirname, '..', 'src', 'index.pug'), { sourceMaps: false })
+let bundler = new Bundler(join(__dirname, '..', 'src', 'index.pug'), { sourceMaps: false, minify: false })
 
 async function build() {
   let bundle = await bundler.bundle()
@@ -69,7 +69,6 @@ async function build() {
       }
     })
   }
-
   await writeFile(join(__dirname, '..', basename(cssFile)), css)
   await Promise.all(assets.filter(i => extname(i) === '.png').map(async i => {
     await copyFile(i, join(__dirname, '..', basename(i)))
