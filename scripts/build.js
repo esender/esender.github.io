@@ -70,7 +70,7 @@ async function build() {
     })
   }
   await writeFile(join(__dirname, '..', basename(cssFile)), css)
-  await Promise.all(assets.filter(i => extname(i) === '.png').map(async i => {
+  await Promise.all(assets.filter(i => ['.png', '.svg'].includes(extname(i))).map(async i => {
     await copyFile(i, join(__dirname, '..', basename(i)))
   }))
   await Promise.all(assets
