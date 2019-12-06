@@ -20,7 +20,7 @@ function findAssets (bundle) {
   }, [bundle.name])
 }
 
-let bundler = new Bundler(join(__dirname, '..', 'src', 'index.pug'), { sourceMaps: false, minify: false })
+let bundler = new Bundler(join(__dirname, '..', 'src', 'index.pug'), { sourceMaps: false, minify: true })
 
 async function build() {
   let bundle = await bundler.bundle()
