@@ -2,24 +2,19 @@ name: Node CI
 
 on:
   push:
-    branches: 
+    branches:
       - master
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
     steps:
     - uses: actions/checkout@v1
     - name: Use Node.js 12.x
       uses: actions/setup-node@v1
       with:
         node-version: '12.x'
-    - name: npm install, build, and test
-      run: |
-        yarn
-        yarn test
-        yarn build
-      env:
-        CI: true
+    - name: Install packages
+      run: yarn install
+    - name: Build and test
+      run: yarn test
