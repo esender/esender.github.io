@@ -1,56 +1,20 @@
-include _mixins.pug
 doctype html
 html(lang='en' itemscope itemtype='http://schema.org/Person')
   head
     meta(charset='UTF-8')
     title Marat Abdulin
     meta(name='description' content='Contacts of Marat Abdulin')
-    meta(name='viewport' content='width=device-width, initial-scale=1')
-    link(rel='shortcut icon' href='./favicon.ico' sizes='48x48')
-    link(rel='apple-touch-icon' sizes='180x180' href='./apple-touch-icon.png')
-    link(rel='icon' type='image/png' sizes='32x32' href='./favicon-32x32.png')
-    link(rel='icon' type='image/png' sizes='16x16' href='./favicon-16x16.png')
-    link(rel='stylesheet' href='./index.sss')
-    link(href="https://fonts.googleapis.com/css?family=Fira+Sans|Open+Sans:400,400i,700&display=swap&subset=cyrillic" rel="stylesheet")
-    meta(itemprop='gender' content='male')
-    link(itemprop='url' href='https://esender.me')
+    include parts/head.pug
   body
-    header.header
-      .name Marat Abdulin
-      //- nav
-        ul.navigation-list
-          li.navigation-item
-            a.navigation-link(href="#") Home
-          li.navigation-item
-            a.navigation-link(href="#") About
-          li.navigation-item
-            a.navigation-link(href="#") Projects
-          li.navigation-item
-            a.navigation-link(href="#") CV
-          li.navigation-item
-            a.navigation-link(href="#") Blog
+    include parts/header.pug
     main.container
       .content
         h1.greeting #[span.hey Hi,] I am Marat Abdulin 👋
         h2.who-i-am A software engineer based in Kazan, Russia
-        p My favorite language is JavaScript. I'm fond of solving performance issues and working on non-trivial problems. My experience allows me to choose the best solutions for the business. I'm motivated by working on a useful product.
+        p My favorite language is JavaScript. I'm fond of solving performance issues and working on non-trivial problems. My experience allows me to choose the best solutions for business and development. I'm motivated by working on a useful product.
+        p If you are looking for a software engineer you can take a look at my #[a(href='/resume.pug') résumé page] or just download it right from #[a(href=resume_link) here].
         //-More about me, my axperience and interests.
         //- p You also can browse #[a(href) who I am] or check out my #[a(href) projects] page.
     .container
       hr.delimiter
-    footer.footer
-      a(href="mailto:marat@esender.me") marat@esender.me
-      .or or
-      ul.social-links
-        li.social-links-item
-          a(href="https://www.linkedin.com/in/esender/")
-            +icon('linkedin')
-        li.social-links-item
-          a(href="https://t.me/esender")
-            +icon('telegram')
-        li.social-links-item
-          a(href="https://twitter.com/esender_")
-            +icon('twitter')
-        li.social-links-item
-          a(href="https://github.com/esender")
-            +icon('github')
+    include parts/footer.pug

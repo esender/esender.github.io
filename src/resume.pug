@@ -1,0 +1,165 @@
+include parts/_mixins.pug
+doctype html
+html(lang='en' itemscope itemtype='http://schema.org/Person')
+  head
+    meta(charset='UTF-8')
+    title Marat Abdulin
+    meta(name='description' content='Contacts of Marat Abdulin')
+    include parts/head.pug
+  body
+    include parts/header.pug
+    main.container
+      .content
+        .resume
+          .resume__pdf_link
+            a(href=resume_link) Download PDF
+          .resume__updated
+            span UPDATED ON 25 DEC, 2019
+          header.resume__header.resume__block.resume--center
+            h1.resume__headline Marat Abdulin
+            span.resume__position Software Engineer
+          .resume__photo.resume__block.resume--center
+            img.resume__photo_image(src='./images/marat-abdulin.jpg')
+          .resume__summary.resume__block
+            p I’m a skilled software engineer with more than 12 years of experience in web development. During this time I’ve been working with a variety of technologies and projects. My knowledge covers a broad range of modern full-stack development. I’m proficient in both frontend and backend technologies.
+            p I’m fond of solving performance issues, working on complex problems and searching for the best solutions that are suitable for both tech and business.
+          .resume__aside
+            .resume__contacts.resume__block
+              h2 Contacts
+              ul.simple-list
+                li
+                  +icon('at', 'resume__icon')
+                  a(href=`mailto:${email}`) #{email}
+                li
+                  +icon('github', 'resume__icon')
+                  a(href=github_link) e​sender
+                li
+                  +icon('linkedin', 'resume__icon')
+                  a(href=linkedin_profile_link) e​sender
+                li
+                  +icon('telegram', 'resume__icon')
+                  a(href=telegram_link) @​esender
+                li
+                  +icon('twitter', 'resume__icon')
+                  a(href=twitter_link) e​sender.me
+            .resume__languages.resume__block
+              h2 Languages
+              ul.simple-list
+                li English​ #[span.resume--gray / B1]
+                li Russian #[span.resume--gray /​ native]
+                li Tatar #[span.resume--gray /​ native]
+          .resume__skills.resume__block
+            h2 Skills
+            .skills_set
+              .skills_set__column
+                h3 JavaScript
+                ul.resume__skills_list
+                  li React, Preact, Vue
+                  li React env libraries
+                  li Webpack, Parcel
+                  li Jest, Ava, Mocha, Chai, Sinon
+                h3 Ruby
+                ul.resume__skills_list
+                  li Ruby on Rails, Hanami
+                h3 Databases
+                ul.resume__skills_list
+                  li Redis, MongoDB
+                  li PostgreSQL,MySQL
+              .skills_set__column
+                h3 NodeJS
+                ul.resume__skills_list
+                  li Express, Fastify, Nuxt
+                  li Bolt, Telegraf
+                  li Sequilize, Mongoose
+                h3 Other
+                ul.resume__skills_list
+                  li Debugging
+                  li Frontend performance
+                  li HTML5, CSS3
+                  li Mentoring
+                  li Team Leading
+          .resume__experience.resume__block
+            h2 Work Experience
+            .unit
+              .unit__header
+                h3.unit__headline Earnest Inc.
+                span.unit__position Software Engineer​
+                span.unit__gray_small
+                  span.unit__bracket (
+                  | VanillaJS, Preact, Webpack, Jira, Optimizely, Wordpress
+                  span.unit__bracket )
+              .unit__info
+                span.unit__working_dates January 2019 — Present
+                span.unit__location Remote
+              .unit__description
+                ul.unit__list
+                  li Improved page speed performance
+                  li Improved build size and coding experience using webpack
+            .unit
+              .unit__header
+                h3.unit__headline Student Loan Hero Inc.
+                span.unit__position Front-end Engineer​
+                span.unit__gray_small
+                  span.unit__bracket (
+                  | React, VanillaJS, Webpack, Jira, Wordpress, CodeShip
+                  span.unit__bracket )
+              .unit__info
+                span.unit__working_dates March 2018 — January 2019
+                span.unit__location Remote
+              .unit__description
+                ul.unit__list
+                  li Optimized bundle size, page loading speed, and performance
+                  li Improved code quality, coding experience using webpack
+            .unit
+              .unit__header
+                h3.unit__headline Runtime LLC
+                span.unit__position Front-end Engineer​
+                span.unit__gray_small
+                  span.unit__bracket (
+                  | React, Webpack, Jira, Gemini, Rspec, GitLab CI
+                  span.unit__bracket )
+              .unit__info
+                span.unit__working_dates March 2016 — March 2018
+                span.unit__location Kazan, Russia
+              .unit__description
+                ul.unit__list
+                  li Improved build and render performance
+                  li Covered project by unit and screenshot tests
+            .unit
+              .unit__header
+                h3.unit__headline Racoons Group LLC.
+                span.unit__position Full-Stack Engineer
+                span.unit__gray_small
+                  span.unit__bracket (
+                  | Ruby on Rails, AngularJS, Backbone, Express
+                  span.unit__bracket )
+              .unit__info
+                span.unit__working_dates October 2012 — December 2015
+                span.unit__location Kazan, Russia
+              .unit__description
+                ul.unit__list
+                  li Grew up to team leader
+                  li Worked on important projects
+            .unit
+              .unit__header
+                h3.unit__headline Freelance
+                span.unit__position Web Developer​
+                span.unit__gray_small
+                  span.unit__bracket (
+                  | HTML, CSS, Joomla, PHPShop, jQuery
+                  span.unit__bracket )
+              .unit__info
+                span.unit__working_dates 2008 — October 2012
+                span.unit__location Kazan, Russia
+          .resume__education
+            h2 Education
+            .unit
+              .unit__header
+                h3.unit__headline Kazan National Research Technical University named after A.N.Tupolev
+                span Institute of radio-engineering and telecommunications
+              .unit__info
+                span September 2007 – July 2011
+              .unit__description Bachelor of Engineering and Technology
+    .container
+      hr.delimiter
+    include parts/footer.pug

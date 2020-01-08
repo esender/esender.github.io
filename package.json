@@ -23,7 +23,7 @@
     "sugarss": "^2.0.0"
   },
   "scripts": {
-    "start": "parcel src/index.pug",
+    "start": "parcel src/*.pug",
     "build": "yarn clean && NODE_ENV=production node scripts/build.js",
     "clean": "rimraf dist/ index.html *.css *.png *.svg *.ico",
     "lint": "stylelint src/**/*.sss src/*.sss",
