@@ -73,6 +73,9 @@ async function build() {
   await Promise.all(assets.filter(i => ['.png', '.svg', '.ico', '.jpg', '.webp'].includes(extname(i))).map(async i => {
     await copyFile(i, join(__dirname, '..', basename(i)))
   }))
+  await Promise.all(assets.filter(i => ['.pdf'].includes(extname(i))).map(async i => {
+    await copyFile(i, join(__dirname, '..', 'files', basename(i)))
+  }))
   await Promise.all(assets
     .filter(i => extname(i) === '.html')
     .map(async i => {
