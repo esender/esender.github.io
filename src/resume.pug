@@ -27,9 +27,9 @@ html(lang='en' itemscope itemtype='http://schema.org/Person')
             p I’m a skilled software engineer with more than 12 years of experience in web development. During this time I’ve been working with a variety of technologies and projects. My knowledge covers a broad range of modern full-stack development. I’m proficient in both frontend and backend technologies.
             p I’m fond of solving performance issues, working on complex problems and searching for the best solutions that are suitable for both tech and business.
           .resume__aside
-            .resume__contacts.resume__block
+            .resume__block
               h2 Contacts
-              ul.simple-list
+              ul
                 li
                   +icon('at', 'resume__icon')
                   a(href=`mailto:${email}`) #{email}
@@ -45,16 +45,16 @@ html(lang='en' itemscope itemtype='http://schema.org/Person')
                 li
                   +icon('twitter', 'resume__icon')
                   a(href=twitter_link) e​sender.me
-            .resume__languages.resume__block
+            .resume__block
               h2 Languages
-              ul.simple-list
+              ul
                 li English​ #[span.resume--gray / B1]
                 li Russian #[span.resume--gray /​ native]
                 li Tatar #[span.resume--gray /​ native]
           .resume__skills.resume__block
             h2 Skills
             .skills_set
-              .skills_set__column
+              div
                 h3 JavaScript
                 ul.resume__skills_list
                   li React, Preact, Vue
@@ -68,7 +68,7 @@ html(lang='en' itemscope itemtype='http://schema.org/Person')
                 ul.resume__skills_list
                   li Redis, MongoDB
                   li PostgreSQL,MySQL
-              .skills_set__column
+              div
                 h3 NodeJS
                 ul.resume__skills_list
                   li Express, Fastify, Nuxt
