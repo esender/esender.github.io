@@ -70,15 +70,14 @@ async function build() {
     })
   }
   await writeFile(join(__dirname, '..', basename(cssFile)), css)
-  await Promise.all(assets.filter(i => ['.png', '.svg', '.ico'].includes(extname(i))).map(async i => {
+  await Promise.all(assets.filter(i => ['.png', '.svg', '.ico', '.jpg', '.webp'].includes(extname(i))).map(async i => {
     await copyFile(i, join(__dirname, '..', basename(i)))
   }))
   await Promise.all(assets
     .filter(i => extname(i) === '.html')
     .map(async i => {
       let html = await readFile(i)
-      console.log(join(__dirname, '..', 'index.html'))
-      await writeFile(join(__dirname, '..', 'index.html'), posthtml()
+      await writeFile(join(__dirname, '..', basename(i)), posthtml()
         .use(htmlPlugin)
         .process(html, { sync: true })
         .html)
