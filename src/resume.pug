@@ -19,7 +19,10 @@ html(lang='en' itemscope itemtype='http://schema.org/Person')
             h1.resume__headline Marat Abdulin
             span.resume__position Software Engineer
           .resume__photo.resume__block.resume--center
-            img.resume__photo_image(src='./images/marat-abdulin.jpg')
+            picture
+              source(type='image/webp' srcset='./images/marat-abdulin.webp 1x,./images/marat-abdulin@2x.webp 1.5x')
+              source(srcset='./images/marat-abdulin.jpg 1x, ./images/marat-abdulin@2x.jpg 1.5x')
+              img.resume__photo_image(src='./images/marat-abdulin.jpg' alt='Marat Abdulin')
           .resume__summary.resume__block
             p I’m a skilled software engineer with more than 12 years of experience in web development. During this time I’ve been working with a variety of technologies and projects. My knowledge covers a broad range of modern full-stack development. I’m proficient in both frontend and backend technologies.
             p I’m fond of solving performance issues, working on complex problems and searching for the best solutions that are suitable for both tech and business.
@@ -84,10 +87,7 @@ html(lang='en' itemscope itemtype='http://schema.org/Person')
               .unit__header
                 h3.unit__headline Earnest Inc.
                 span.unit__position Software Engineer​
-                span.unit__gray_small
-                  span.unit__bracket (
-                  | VanillaJS, Preact, Webpack, Jira, Optimizely, Wordpress
-                  span.unit__bracket )
+                span.unit__gray_small VanillaJS, Preact, Webpack, Jira, Optimizely, Wordpress
               .unit__info
                 span.unit__working_dates January 2019 — Present
                 span.unit__location Remote
@@ -99,10 +99,7 @@ html(lang='en' itemscope itemtype='http://schema.org/Person')
               .unit__header
                 h3.unit__headline Student Loan Hero Inc.
                 span.unit__position Front-end Engineer​
-                span.unit__gray_small
-                  span.unit__bracket (
-                  | React, VanillaJS, Webpack, Jira, Wordpress, CodeShip
-                  span.unit__bracket )
+                span.unit__gray_small React, VanillaJS, Webpack, Jira, Wordpress, CodeShip
               .unit__info
                 span.unit__working_dates March 2018 — January 2019
                 span.unit__location Remote
@@ -114,10 +111,7 @@ html(lang='en' itemscope itemtype='http://schema.org/Person')
               .unit__header
                 h3.unit__headline Runtime LLC
                 span.unit__position Front-end Engineer​
-                span.unit__gray_small
-                  span.unit__bracket (
-                  | React, Webpack, Jira, Gemini, Rspec, GitLab CI
-                  span.unit__bracket )
+                span.unit__gray_small React, Webpack, Jira, Gemini, Rspec, GitLab CI
               .unit__info
                 span.unit__working_dates March 2016 — March 2018
                 span.unit__location Kazan, Russia
@@ -129,10 +123,7 @@ html(lang='en' itemscope itemtype='http://schema.org/Person')
               .unit__header
                 h3.unit__headline Racoons Group LLC.
                 span.unit__position Full-Stack Engineer
-                span.unit__gray_small
-                  span.unit__bracket (
-                  | Ruby on Rails, AngularJS, Backbone, Express
-                  span.unit__bracket )
+                span.unit__gray_small Ruby on Rails, AngularJS, Backbone, Express
               .unit__info
                 span.unit__working_dates October 2012 — December 2015
                 span.unit__location Kazan, Russia
@@ -144,10 +135,7 @@ html(lang='en' itemscope itemtype='http://schema.org/Person')
               .unit__header
                 h3.unit__headline Freelance
                 span.unit__position Web Developer​
-                span.unit__gray_small
-                  span.unit__bracket (
-                  | HTML, CSS, Joomla, PHPShop, jQuery
-                  span.unit__bracket )
+                span.unit__gray_small HTML, CSS, Joomla, PHPShop, jQuery
               .unit__info
                 span.unit__working_dates 2008 — October 2012
                 span.unit__location Kazan, Russia
