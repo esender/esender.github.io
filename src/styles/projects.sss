@@ -1,0 +1,26 @@
+.project:not(:last-child)
+  margin-bottom: calc(2 * var(--page-vertical-spacings))
+
+.project-links
+  margin-top: var(--page-vertical-spacings)
+
+.project-link
+  margin-left: 0.5em
+  vertical-align: middle
+
+.project-icon
+  width: 1em
+  height: 1em
+  vertical-align: middle
+
+@media (--small-tablet)
+  .projects
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+
+  .project
+    width: calc(50% - var(--page-vertical-spacings))
+
+  .project:nth-last-child(n+3)
+    margin-bottom: calc(2 * var(--page-vertical-spacings))
