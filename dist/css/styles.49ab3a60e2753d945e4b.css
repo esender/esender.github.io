@@ -1,0 +1,546 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default padding */
+ul,
+ol {
+  padding: 0;
+  list-style: none;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* Natural flow and rhythm in articles by default */
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition-duration: 0.01ms !important;
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+:root {
+  color-scheme: light dark;
+
+  --primary-font: 'Open Sans', sans-serif;
+  --secondary-font: 'Fira Sans', sans-serif;
+  --color-base: #333;
+  --page-vertical-spacings: 1rem;
+  --page-horizontal-spacings: 1rem;
+  --page-spacings: var(--page-vertical-spacings) var(--page-horizontal-spacings);
+  --max-page-width: 1200px;
+  --max-content-width: 800px;
+  --background-color: #fff;
+
+}
+
+@media (min-width: 660px) {
+  :root {
+    --page-horizontal-spacings: 2rem;
+  }
+}
+
+/* @import url('https://fonts.googleapis.com/css?family=Fira+Sans+Condensed|Open+Sans:400,400i,700&display=swap&subset=cyrillic') */
+
+* {
+  font-family: var(--primary-font);
+  line-height: 1.5em;
+}
+
+html {
+  font-size: 18px;
+  color: var(--color-base);
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 1024px) {
+  html {
+    font-size: 18px;
+  }
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin-bottom: 0.3em;
+  font-family: var(--secondary-font);
+}
+
+h1 {
+  font-size: 1.5rem;
+}
+
+h2 {
+  font-size: 1.3rem;
+}
+
+h3 {
+  font-size: 1.1rem;
+}
+
+p + p {
+  margin-top: 1em;
+}
+
+a {
+  color: var(--color-base);
+  text-decoration: underline;
+}
+
+a:visited {
+  color: var(--color-base);
+}
+
+a:hover {
+  color: var(--color-base);
+}
+
+body {
+  background-color: var(--background-color);
+}
+
+.delimiter {
+  height: 1px;
+  margin: 0;
+  background: #e5e5e5;
+  border: none;
+}
+
+.header {
+  padding: var(--page-spacings);
+  text-align: center;
+}
+
+.name {
+  font-family: var(--secondary-font);
+  font-size: 1.3rem;
+}
+
+.navigation-list {
+  display: flex;
+  justify-content: space-around;
+}
+
+.navigation-item {
+  list-style: none;
+}
+
+@media (min-width: 768px) {
+  .header {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: var(--page-vertical-spacings);
+    align-items: center;
+    max-width: var(--max-page-width);
+    margin: 0 auto;
+    text-align: left;
+  }
+}
+
+.footer {
+  padding: var(--page-spacings);
+  text-align: center;
+}
+
+.or {
+  margin: 0.4rem 0;
+  font-size: 0.8rem;
+}
+
+.social-links {
+  font-size: 32px;
+  text-align: center;
+}
+
+.social-links-item {
+  display: inline-block;
+}
+
+.social-links-item + .social-links-item {
+  margin-left: 1em;
+}
+
+.social-icon {
+  width: 1em;
+  height: 1em;
+}
+
+@media (min-width: 768px) {
+  .footer {
+    max-width: var(--max-page-width);
+    margin: 0 auto;
+  }
+}
+
+.container {
+  padding: var(--page-spacings);
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: var(--max-page-width);
+    margin: 0 auto;
+  }
+}
+
+.content {
+  margin: 0 auto;
+}
+
+@media (min-width: 660px) {
+  .content {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+}
+
+@media (min-width: 768px) {
+  .content {
+    max-width: var(--max-content-width);
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+.greeting,
+.hey,
+.who-i-am {
+  font-family: var(--secondary-font);
+}
+
+.hey {
+  display: none;
+}
+
+.who-i-am {
+  margin-bottom: 1.5em;
+}
+
+@media (min-width: 660px) {
+  .hey {
+    display: inline;
+  }
+}
+
+.resume--center {
+  text-align: center;
+}
+
+.resume__headline {
+  margin-bottom: 0;
+  line-height: 1.1em;
+}
+
+.resume__position {
+  font-family: var(--secondary-font);
+  font-size: 1.05rem;
+}
+
+.resume__photo_image {
+  display: inline;
+  max-width: 220px;
+}
+
+.resume__skills_list {
+  margin-bottom: var(--page-vertical-spacings);
+  font-size: 0.9rem;
+}
+
+.resume__icon {
+  width: 1em;
+  height: 1em;
+  margin-right: 0.3em;
+  vertical-align: middle;
+}
+
+.resume__pdf_link {
+  margin-bottom: var(--page-vertical-spacings);
+  text-align: center;
+}
+
+.resume__updated {
+  margin-bottom: var(--page-vertical-spacings);
+  font-size: 0.7em;
+  color: gray;
+  text-align: center;
+}
+
+.resume__block {
+  margin-bottom: calc(var(--page-vertical-spacings) * 2);
+}
+
+.resume--gray {
+  color: gray;
+}
+
+.unit {
+  margin-bottom: var(--page-vertical-spacings);
+}
+
+.unit__header,
+.unit__info {
+  margin-bottom: calc(var(--page-vertical-spacings) * 0.5);
+}
+
+.unit__headline {
+  margin-bottom: 0;
+}
+
+.unit__gray_small {
+  font-size: 0.8em;
+  line-height: 1.3em;
+  color: gray;
+}
+
+.unit__list {
+  padding-left: 1.2em;
+  list-style: circle;
+}
+
+.unit__position {
+  display: block;
+  font-size: 0.9em;
+}
+
+.unit__working_dates {
+  display: block;
+}
+
+.unit__info,
+.unit__description {
+  font-size: 0.9em;
+}
+
+@media (min-width: 660px) {
+  .resume {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .resume__header,
+  .resume__photo,
+  .resume__summary,
+  .resume__experience,
+  .resume__education {
+    grid-column: 1 / 3;
+  }
+
+  .resume__aside {
+    grid-column: 2 / 3;
+  }
+
+  .resume__skills {
+    grid-row: 5 / span 1;
+    grid-column: 1 / 2;
+  }
+
+  .unit__position,
+  .unit__working_dates {
+    display: inline;
+  }
+
+  .unit__gray_small::before {
+    content: ' (';
+  }
+
+  .unit__gray_small::after {
+    content: ')';
+  }
+
+  .unit__location::before {
+    content: ' / ';
+  }
+
+  .resume__pdf_link {
+    text-align: left;
+  }
+
+  .resume__updated {
+    text-align: right;
+  }
+}
+
+@media (min-width: 768px) {
+  .resume {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .resume__updated {
+    grid-column: 3 / 4;
+  }
+
+  .resume__header {
+    grid-row: 1 / span 1;
+    grid-column: 2 / 3;
+  }
+
+  .resume__photo {
+    grid-column: 3 / 4;
+  }
+
+  .resume__summary {
+    grid-row: 2 / span 1;
+    grid-column: 1 / 3;
+  }
+
+  .resume__skills {
+    grid-row: 3 / span 1;
+    grid-column: 1 / 3;
+  }
+
+  .resume__aside {
+    grid-column: 3 / 4;
+  }
+
+  .resume__experience,
+  .resume__education {
+    grid-column: 1 / 4;
+
+  }
+
+  .skills_set {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .unit {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1.4fr;
+  }
+
+  .unit__header {
+    grid-column: 1 / 3;
+  }
+
+  .unit__position {
+    display: block;
+  }
+
+  .unit__gray_small::before,
+  .unit__gray_small::after {
+    content: none;
+  }
+
+  .unit__description {
+    grid-column: 1 / 4;
+  }
+
+  .unit__info {
+    text-align: right;
+  }
+
+  .unit__working_dates {
+    display: block;
+  }
+
+  .unit__location::before {
+    content: none;
+  }
+}
+
+@media (min-width: 1024px) {
+  .unit {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.project:not(:last-child) {
+  margin-bottom: calc(2 * var(--page-vertical-spacings));
+}
+
+.project-links {
+  margin-top: var(--page-vertical-spacings);
+}
+
+.project-link {
+  margin-left: 0.5em;
+  vertical-align: middle;
+}
+
+.project-icon {
+  width: 1em;
+  height: 1em;
+  vertical-align: middle;
+}
+
+@media (min-width: 660px) {
+  .projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .project {
+    width: calc(50% - var(--page-vertical-spacings));
+  }
+
+  .project:nth-last-child(n+3) {
+    margin-bottom: calc(2 * var(--page-vertical-spacings));
+  }
+}
+
+
+
